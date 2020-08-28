@@ -1,0 +1,22 @@
+<%- include("header.ejs") %>
+<%- include("topnav.ejs") %>
+
+<div id="mainContent">
+
+    Friends list goes here
+
+  <%  friends.forEach(function(friend){  %> 
+<li><%= friend %></li>
+<%   }); %> 
+
+<form action="/addfriend" method="POST">
+  <input name="newFriend" type="text" placeholder="name">
+  <button>Add new friend</button>
+
+</form>
+
+
+
+</div>
+
+<%- include("footer.ejs") %>
