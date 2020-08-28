@@ -1,0 +1,23 @@
+body{margin:0; padding:0;
+
+}
+header{
+        background-color:darkslategray; 
+        height:150px;width:100%; margin-top:0; padding:0;
+}
+nav{background-color:bisque; width:100%; height:30px;}
+footer{
+    background-color:darkslateblue; 
+    height:100px;
+    padding-top:10px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;    
+    color: white;
+    text-align: center;
+}
+#demo{margin-left:30px;font-family:Verdana, Geneva, Tahoma, sans-serif}
+
+.new{color:red; position: absolute;margin-left:30px;
+     }

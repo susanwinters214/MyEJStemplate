@@ -1,0 +1,33 @@
+{
+  "name": "ejstemplate",
+  "version": "1.0.0",
+  "description": "From Colt Steel https://www.udemy.com/course/the-web-developer-bootcamp/learn/lecture/3861616#overview",
+  "main": "app.js",
+  "scripts": {
+    "test": "testit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/susanwinters214/ejstemplate.git"
+  },
+  "keywords": [
+    "ejs",
+    "ejs",
+    "template",
+    "ejs",
+    "starter",
+    "website"
+  ],
+  "author": "Susan Winters",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/susanwinters214/ejstemplate/issues"
+  },
+  "homepage": "https://github.com/susanwinters214/ejstemplate#readme",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4"
+  }
+}
