@@ -62,13 +62,12 @@ app.get("/posts", function(req, res){
 })
 
 
-
+/*
 app.listen(3300, function(){
     console.log("Server has started on port 3300");
 });
+*/
 
-/*
 app.listen(process.env.PORT, process.env.IP, function(){
     console.log("Server is listening on 3000");
 })
-*/
