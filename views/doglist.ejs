@@ -1,0 +1,18 @@
+<%- include("header.ejs") %>
+<%- include("topnav.ejs") %>
+
+<div id="mainContent">
+<h1>My DOG List</h1>
+
+        <!--Loop thru an array & output to HTML list items-->
+        <!--currently the array of post items is in App.js-->
+
+        <div id="demo">
+        <% for(var i =0; i < thedogs.length; i++){ %>
+            <li><strong><%= thedogs[i].title %></strong> - <%= thedogs[i].author %> </li>
+        <%} %>
+        </div>
+This information is coming from a hard-coded internal array set in App.js
+</div>
+
+<%- include("footer.ejs") %>

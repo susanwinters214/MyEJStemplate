@@ -7,67 +7,50 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
 
-// ADD TO LIST:
-var friends = ["Charlie", "Bentley", "Tilly", "Jacob" ];
-
+// GLOBAL VARIABLE:
+var friends = ["Jacob", "Ashley", "Sarah", "Tina" ];
+var people = [{title: "People 1", author: "Ken"},{title: "People 2", author: "Carol"} ];
+   
+// PATH: HOME 
 app.get("/", function(req, res){
     res.render("home.ejs")
-   // res.send("<h1>Welcome to the home page</h1>");
 });
-
-app.get("/posts", function(req, res){
-    var posts = [
-        {title: "Post 1", author: "Susan"},
-        {title: "Post 2", author: "Charlie"},
-        {title: "Post 3", author: "Tina"},
-    ];
-    res.render('posts.ejs', {posts:posts}); // called in template // variable
-})
-
-app.post("/addfriend", function(req, res){
-    var newFriend = req.body.newFriend;
-    console.log("NEW FRIEND: " + newFriend);
-   friends.push(newFriend);
-  res.redirect("/friends");    
-  }); 
-
-
-app.get("/friends", function(req, res){
-
-       res.render('friends.ejs', {friends:friends}); // called in template // variable
-  });
-
- 
-
-// Empty Page for Template
+// PATH: Empty Page for Template
 app.get("/empty", function(req, res){
     res.render("empty.ejs")   
 });
-
-// Fell in love with WHO - A dynamic page
-app.get("/inlovewith/:who", function(req, res){
-    var who = req.params.who;
-    res.render('love.ejs', {varWho: who})   
-});
-
-
-
-app.get("/posts", function(req, res){
-    var posts = [
-        {title: "Post 1", author: "Susan"},
-        {title: "Post 2", author: "Charlie"},
-        {title: "Post 3", author: "Tina"},
-    ];
-    res.render('posts.ejs', {posts:posts}); // called in template // variable
+// PATH: FRIENDS & ADDFRIEND - Array called above in global variable
+app.get("/friends", function(req, res){
+    res.render('friends.ejs', {friends:friends}); // called in template // variable
+     });
+app.post("/addfriend", function(req, res){
+    var newFriend = req.body.newFriend;
+    console.log("NEW FRIEND: " + newFriend);
+    friends.push(newFriend);
+    res.redirect("/friends");    
+  }); 
+// PATH: PEOPLE - Array called above in global variable
+app.get("/people", function(req, res){
+     res.render('people.ejs', {mypeople:people}); // called in template // variable
+})
+// PATH: COLORS - Array called in variable included
+app.get("/colors", function(req, res){
+    var favcolors = [ {title: "red"},  {title: "green"},  {title: "blue"}  ];
+    res.render('colors.ejs', {showcolors:favcolors}); // called in template // variable
+})
+// PATH: DOGLIST - Array called in variable included
+app.get("/doglist", function(req, res){
+    var mydogs = [ {title: "Dog 1", author: "Bently"},  {title: "Dog 2", author: "Charlie"},  {title: "Dog 3", author: "Tilley"}  ];
+    res.render('doglist.ejs', {thedogs:mydogs}); // called in template // variable
 })
 
 
-/*
-app.listen(3300, function(){
-    console.log("Server has started on port 3300");
+app.listen(3200, function(){
+    console.log("Server has started on port 3200");
 });
-*/
 
+/*
 app.listen(process.env.PORT, process.env.IP, function(){
     console.log("Server is listening on 3000");
 })
+*/
