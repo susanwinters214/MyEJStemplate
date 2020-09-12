@@ -43,10 +43,13 @@ app.get("/doglist", function(req, res){
     var mydogs = [ {title: "Dog 1", author: "Bently"},  {title: "Dog 2", author: "Charlie"},  {title: "Dog 3", author: "Tilley"}  ];
     res.render('doglist.ejs', {thedogs:mydogs}); // called in template // variable
 })
+// PATH: CATLIST - Array called in variable included
+app.get("/catlist", function(req, res){
+    res.render('catlist.ejs'); // json data called inside the ejs page
+})
 
-
-app.listen(3200, function(){
-    console.log("Server has started on port 3200");
+app.listen(3000, function(){
+    console.log("Server has started on port 3000");
 });
 
 /*

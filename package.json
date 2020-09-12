@@ -4,11 +4,12 @@
   "description": "From Colt Steel https://www.udemy.com/course/the-web-developer-bootcamp/learn/lecture/3861616#overview",
   "main": "app.js",
   "scripts": {
-    "test": "testit"
+    "test": "testit",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/susanwinters214/ejstemplate.git"
+    "url": "git+https://github.com/susanwinters214/MyEJStemplate.git"
   },
   "keywords": [
     "ejs",
